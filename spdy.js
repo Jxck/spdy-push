@@ -60,12 +60,26 @@ var filepath = [
   '/images/icon7.png',
   '/images/icon8.png',
   '/images/icon9.png',
-  '/stylesheets/style0.css',
-  '/stylesheets/style1.css',
-  '/stylesheets/style2.css',
-  '/javascripts/script0.js',
-  '/javascripts/script1.js',
-  '/javascripts/script2.js',
+  '/stylesheets/bootstrap.0.css',
+  '/stylesheets/bootstrap.1.css',
+  '/stylesheets/bootstrap.2.css',
+  '/stylesheets/bootstrap.3.css',
+  '/stylesheets/bootstrap.4.css',
+  '/stylesheets/bootstrap.5.css',
+  '/stylesheets/bootstrap.6.css',
+  '/stylesheets/bootstrap.7.css',
+  '/stylesheets/bootstrap.8.css',
+  '/stylesheets/bootstrap.9.css',
+  '/javascripts/jquery-1.7.2-0.js',
+  '/javascripts/jquery-1.7.2-1.js',
+  '/javascripts/jquery-1.7.2-2.js',
+  '/javascripts/jquery-1.7.2-3.js',
+  '/javascripts/jquery-1.7.2-4.js',
+  '/javascripts/jquery-1.7.2-5.js',
+  '/javascripts/jquery-1.7.2-6.js',
+  '/javascripts/jquery-1.7.2-7.js',
+  '/javascripts/jquery-1.7.2-8.js',
+  '/javascripts/jquery-1.7.2-9.js',
 ]
 
 var files = filepath.map(function(path) {
@@ -87,9 +101,9 @@ app.get('/', function(req, res) {
       });
     }
 
-//    files.forEach(function(file) {
-//      spdy_push.apply(null, file);
-//    });
+    files.forEach(function(file) {
+      spdy_push.apply(null, file);
+    });
   }
 
   res.render('index', {
