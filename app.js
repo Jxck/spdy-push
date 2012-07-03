@@ -87,9 +87,9 @@ app.get('/', function(req, res) {
       });
     }
 
-    files.forEach(function(file) {
-      spdy_push.apply(null, file);
-    });
+//    files.forEach(function(file) {
+//      spdy_push.apply(null, file);
+//    });
   }
 
   res.render('index', {
