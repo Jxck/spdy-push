@@ -40,6 +40,8 @@ app.configure('production', function(){
 // Routes
 
 function readContent(path) {
+  // サーバ起動時に予め読み込むので、
+  // ここは同期で良いはず。
   return fs.readFileSync(__dirname + '/public' + path);
 }
 
